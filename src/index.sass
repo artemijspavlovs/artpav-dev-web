@@ -1,0 +1,98 @@
+$primary-color: #e5e5e5
+$secondary-color: #eb5e28
+
+$info-color: #6CD4FFFF
+$info-color-shadow: #6CD4FF7F
+
+
+$error-color: #E84855FF
+$error-color-shadow: #E848557F
+$success-color: #499167FF
+$success-color-shadow: #4991677F
+
+
+// CLIInput
+.cli-flex
+  display: flex
+
+.cli-form-container
+  align-content: center
+  align-items: center
+  justify-content: flex-start
+
+  flex-direction: row
+  width: 100%
+  margin: 0
+
+
+.cli-user-label
+  color: #ffffff
+
+
+.cli-command-input
+  background: #000000
+  color: #ffffff
+
+  margin-left: 0.5rem
+  /* hack to vertically center text*/
+  padding-top: 0.2rem
+
+  border: none
+
+  &:hover
+    cursor: none
+
+  &:focus
+    outline: none
+
+.cli-input-form
+  margin-top: 1rem
+
+// color scheme
+.error
+  color: $error-color
+  text-shadow: 0 0 1px $error-color-shadow
+
+.success
+  color: $success-color
+  text-shadow: 0 0 1px $success-color-shadow
+
+.info
+  color: $info-color
+  text-shadow: 0 0 1px $info-color-shadow
+  font-weight: 600
+
+.available-command
+  color: $secondary-color
+  text-shadow: 0 0 1px rgba(229, 152, 155, 0.5)
+  font-weight: 600
+
+//  elements
+a
+  color: #57737A
+  text-decoration: underline
+  font-weight: 600
+
+code
+  color: $secondary-color
+
+input
+  font-size: 1rem
+
+//  styling
+.bold
+  font-weight: 600
+
+//  layout
+.width-half
+  width: 50vw
+
+.mt-1
+  margin-top: 1rem
+
+.header
+  font-weight: 900
+
+.tabbed
+  padding-top: 0.5rem
+  padding-left: 3rem

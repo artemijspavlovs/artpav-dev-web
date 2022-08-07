@@ -1,0 +1,25 @@
+html,
+body {
+    padding: 1rem;
+    margin: 0;
+    font-family: "Source Code ProVariable", monospace;
+    font-weight: 500;
+    background: #000;
+    cursor: not-allowed;
+    color: #e5e5e5;
+}
+
+html,
+body,
+#__next {
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

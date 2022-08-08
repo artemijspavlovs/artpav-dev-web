@@ -1,7 +1,8 @@
 import {useRecoilValue} from "recoil";
 import {commandHistory} from "../src/utils/state/recoil/commandAtoms";
+import {FC} from "react";
 
-export const PreviousCommand = () => {
+export const PreviousCommands: FC = () => {
     const previousCommands = useRecoilValue(commandHistory)
     return (
         <>

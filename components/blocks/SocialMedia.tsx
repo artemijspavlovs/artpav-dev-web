@@ -2,7 +2,7 @@ import {socialMedia} from "../../src/utils/constants/socialMedia";
 
 const SocialMedia = () => {
     return (
-        <>
+        <div>
             {
                 socialMedia.map(m => {
                     return (
@@ -18,7 +18,7 @@ const SocialMedia = () => {
                     )
                 })
             }
-        </>
+        </div>
     )
 }
 

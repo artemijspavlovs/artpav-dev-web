@@ -1,11 +1,12 @@
 import AvailableCommands from "./AvailableCommands";
 import SocialMedia from "./SocialMedia";
 import {FC} from "react";
+import About from "./About";
 
 const ManPage: FC = () => {
     return (
         <div className={"width-half"}>
-            <div className={"header"}>
+            <div className={"header mt-1"}>
                 Name
             </div>
             <div className={"tabbed"}>
@@ -18,15 +19,7 @@ const ManPage: FC = () => {
             <div className={"header"}>
                 About
             </div>
-            <div className="tabbed">
-                Welcome, I'm Artemijs, an SRE and a programmer. I've spent most of my life creating scalable distributed
-                systems, improving developer productivity through custom software.
-            </div>
-            <div className="tabbed">
-                Technology wise, I know a thing or two about clouds (I've worked
-                with <code>GCP</code> and <code>Azure</code> for some time now, as Engineer, Architect and Consultant)
-                containers and can create software
-            </div>
+            <About/>
             <div className={"header"}>
                 Social Media
             </div>

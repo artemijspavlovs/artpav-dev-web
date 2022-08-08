@@ -6,13 +6,17 @@ import {commandHistory} from "../src/utils/state/recoil/commandAtoms";
 import ManPage from "./blocks/ManPage";
 import ErrorMessage from "./blocks/ErrorMessage";
 import {usableCommands} from "../src/utils/constants/usableCommands";
+import SocialMedia from "./blocks/SocialMedia";
+import About from "./blocks/About";
+import {cliView} from "../src/utils/state/recoil/viewControl";
 
 
 const CLIInput: FC = () => {
     const [commandInputValue, setCommandInputValue] = useState<string>("")
     const [previousCommandExecuted, setPreviousCommandExecuted] = useState<boolean>(true)
     const setPreviousCommands = useSetRecoilState(commandHistory)
-    
+    const setCliView = useSetRecoilState(cliView)
+
     const handleCommand = (command: string) => {
         switch (command) {
             case "help":
@@ -22,14 +26,16 @@ const CLIInput: FC = () => {
                 setPreviousCommands([])
                 return
             case "man":
-                const element = <div className={"error"}>
-                    <div>Not enough parameters. What manual page do you want?</div>
-                    <div>The only supported manual page is <span className={"info"}>man artpav.dev'</span></div>
-                </div>
-                setPreviousCommands((oldState) => [...oldState, element])
-                return;
-            case "man artpav":
                 setPreviousCommands((oldState) => [...oldState, <ManPage/>])
+                return;
+            case "contact":
+                setPreviousCommands((oldState) => [...oldState, <SocialMedia/>])
+                return;
+            case "whois":
+                setPreviousCommands((oldState) => [...oldState, <About/>])
+                return;
+            case "visual":
+                setCliView(false)
                 return;
             default:
                 setPreviousCommands((oldState) => [...oldState,
@@ -66,7 +72,10 @@ const CLIInput: FC = () => {
                 handleSubmit()
             }}>
                 <label htmlFor={"command-input"} className={"cli-user-label"}>
-                    awesome_person@artpav.dev <span className={previousCommandExecuted ? "success" : "error"}>❯</span>
+                    <div>
+                        <span className={"username"}>awesome_person</span>@<span className={"domain"}>artpav.dev</span>
+                        <span className={previousCommandExecuted ? "success" : "error"}> ❯</span>
+                    </div>
                 </label>
                 <input
                     type={"text"}

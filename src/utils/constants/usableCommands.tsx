@@ -5,25 +5,26 @@ export interface UsableCommand {
 
 export const usableCommands: UsableCommand[] = [
     {
-        command: "help",
-        description: "list available commands",
-    },
-    {
-        command: "man artpav",
+        command: "man",
         description: "view artpavs' manpage"
     },
     {
-        command: "whois artpav",
-        description: "view short description about me"
+        command: "help",
+        description: "list available commands (good job!)",
     },
     {
-        command: "contact",
-        description: "list the possible ways to contact me"
+        command: "whois",
+        description: "view short description about me"
     },
     {
         command: "visual",
         description: "switch to visual version of the page"
     },
+    {
+        command: "contact",
+        description: "list the possible ways to contact me"
+    },
+
     {
         command: "clear",
         description: "clear the screen",
